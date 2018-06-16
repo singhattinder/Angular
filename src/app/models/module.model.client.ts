@@ -1,4 +1,4 @@
-export class CourseModelClient {
+export class ModuleModelClient {
   id: number;
   title: string;
 }
