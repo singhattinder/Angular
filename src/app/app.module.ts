@@ -14,6 +14,14 @@ import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { ModuleListComponent } from './module-list/module-list.component';
 import {ModuleServiceClient} from './services/module.service.client';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
+import {LessonsServiceClient} from './services/lessons.service.client';
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { RegisterComponentComponent } from './register-component/register-component.component';
+import { ProfileComponentComponent } from './profile-component/profile-component.component';
+import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { WidgetListComponent } from './widget-list/widget-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +32,14 @@ import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
     CourseGridComponent,
     CourseViewerComponent,
     ModuleListComponent,
-    LessonTabsComponent
+    LessonTabsComponent,
+    LoginComponentComponent,
+    RegisterComponentComponent,
+    ProfileComponentComponent,
+    ProfileComponent,
+    RegisterComponent,
+    LoginComponent,
+    WidgetListComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +49,8 @@ import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
   providers: [
     CourseNavigatorServiceClient,
     CourseServiceClient,
-    ModuleServiceClient
+    ModuleServiceClient,
+    LessonsServiceClient
   ],
   bootstrap: [AppComponent]
 })
