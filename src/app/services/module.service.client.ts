@@ -1,7 +1,8 @@
 export class ModuleServiceClient {
 
+  MODULE_URL = 'http://localhost:8080/api/course/COURSE_ID/module';
   findAllModuleForCourses(courseId) {
-    return fetch('http://localhost:8080/api/course/' + courseId + '/module')
+    return fetch(this.MODULE_URL.replace('COURSE_ID', courseId))
       .then(response => response.json());
   }
 }
