@@ -1,0 +1,14 @@
+.container-fluid{
+  padding: 10px;
+}
+
+.color{
+  background-color: slateblue;
+  border-color: slateblue;
+}
+
+.btn.btn-outline-primary.my-2.my-sm-0{
+  margin-left: 10px;
+  align-items: right;
+
+}

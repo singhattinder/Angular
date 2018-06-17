@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <h1 class="display-4">Welcome to whiteboard</h1>
+  <p class="lead">Number the offered courses in this semester is: {{courses.length}} </p>
+
+
+</div>
+
+
+<div class="row">
+  <div *ngFor="let course of courses" class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{course.title}}</h5>
+        <p class="card-text">This course is {{course.title}}</p>
+        <a routerLink="/course/{{course.id}}" class="btn btn-primary color">select</a>
+      </div>
+    </div>
+  </div>
+</div>
