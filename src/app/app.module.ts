@@ -15,13 +15,11 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import {ModuleServiceClient} from './services/module.service.client';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import {LessonsServiceClient} from './services/lessons.service.client';
-import { LoginComponentComponent } from './login-component/login-component.component';
-import { RegisterComponentComponent } from './register-component/register-component.component';
-import { ProfileComponentComponent } from './profile-component/profile-component.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { WidgetListComponent } from './widget-list/widget-list.component';
+import {WidgetServiceClient} from './services/widget.service.client';
 
 @NgModule({
   declarations: [
@@ -33,9 +31,6 @@ import { WidgetListComponent } from './widget-list/widget-list.component';
     CourseViewerComponent,
     ModuleListComponent,
     LessonTabsComponent,
-    LoginComponentComponent,
-    RegisterComponentComponent,
-    ProfileComponentComponent,
     ProfileComponent,
     RegisterComponent,
     LoginComponent,
@@ -50,7 +45,8 @@ import { WidgetListComponent } from './widget-list/widget-list.component';
     CourseNavigatorServiceClient,
     CourseServiceClient,
     ModuleServiceClient,
-    LessonsServiceClient
+    LessonsServiceClient,
+    WidgetServiceClient
   ],
   bootstrap: [AppComponent]
 })
