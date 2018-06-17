@@ -1,3 +1,33 @@
-<p>
-  login works!
-</p>
+
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" >Login</a>
+
+  </nav>
+
+  <form>
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text"
+             [(ngModel)]="username"
+             class="form-control"
+             placeholder="Username">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password"
+             [(ngModel)]="password"
+             class="form-control"
+             placeholder="Password">
+    </div>
+
+    <button type="button"
+            (click)="login(username, password)"
+            class="btn btn-block btn-primary">Login</button>
+  </form>
+
+
+
+  <span routerLink="/register" class="badge badge-pill badge-secondary">Register</span>
+  <span routerLink="/home" class="badge badge-pill badge-secondary">Home</span>
+</div>
