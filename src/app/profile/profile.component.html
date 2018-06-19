@@ -1,18 +1,42 @@
 <div class="container-fluid">
-  <h1>Profile</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Profile</a>
+  </nav>
 
-  <input [(ngModel)]="username"
-         placeholder="username"
-         class="form-control"/>
-  <input [(ngModel)]="firstName"
-         placeholder="first name"
-         class="form-control"/>
-  <input [(ngModel)]="lastName"
-         placeholder="lastName"
-         class="form-control"/>
-  <input [(ngModel)]="email"
-         placeholder="email"
-         class="form-control"/>
+
+
+  <form>
+    <div class="form-group">
+      <label>Username</label>
+
+      <input [(ngModel)]="user.username"
+             class="form-control"
+             [ngModelOptions]="{standalone: true}"/>
+    </div>
+
+
+    <div class="form-group">
+      <label>First Name</label>
+      <input [(ngModel)]="user.firstName"
+             class="form-control"
+             [ngModelOptions]="{standalone: true}"/>
+    </div>
+
+    <div class="form-group">
+      <label>Last Name</label>
+      <input [(ngModel)]="user.lastName"
+             class="form-control"
+             [ngModelOptions]="{standalone: true}"/>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input [(ngModel)]="user.email"
+             class="form-control"
+             [ngModelOptions]="{standalone: true}"/>
+    </div>
+  </form>
+
   <button (click)="update()"
           class="btn btn-primary btn-block">
     Update
@@ -27,7 +51,7 @@
     </li>
   </ul>
 
-  <a (click)="logout()">Logout</a>
-  <a routerLink="/home">Home</a>
+  <span (click)="logout()" class="badge badge-pill badge-secondary">Logout</span>
+  <span routerLink="/home" class="badge badge-pill badge-secondary">Home</span>
 
 </div>

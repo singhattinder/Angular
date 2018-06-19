@@ -10,7 +10,6 @@ import {UserServiceClient} from '../services/user.service.client';
 export class LoginComponent implements OnInit {
   constructor(private router: Router,
               private service: UserServiceClient) { }
-
   username;
   password;
   login(username, password) {

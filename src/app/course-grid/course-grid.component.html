@@ -1,6 +1,7 @@
 <div class="jumbotron">
   <h1 class="display-4">Welcome to whiteboard</h1>
   <p class="lead">Number the offered courses in this semester is: {{courses.length}} </p>
+  <p><small>Note for TA: only CS5600 has data, Thanks</small></p>
 
 
 </div>
@@ -12,7 +13,14 @@
       <div class="card-body">
         <h5 class="card-title">{{course.title}}</h5>
         <p class="card-text">This course is {{course.title}}</p>
-        <a routerLink="/course/{{course.id}}" class="btn btn-primary color">select</a>
+        <div class="row">
+          <div class="col-sm-12 mar">
+        <a routerLink="/course/{{course.id}}" class="btn btn-primary color">Modules</a>
+          </div>
+          <div class="col-sm-12 mar">
+        <a routerLink="/course/{{course.id}}/section" class="btn btn-primary color">Enroll</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
