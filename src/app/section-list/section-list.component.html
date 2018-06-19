@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Section for course: {{section.courseId}}</a>
+  </nav>
+
+
+  <form>
+
+    <div class="form-group">
+      <label>Section Name</label>
+  <input
+    placeholder="Section Name"
+    [(ngModel)]="section.name"
+    [ngModelOptions]="{standalone: true}"
+    class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Seats available</label>
+  <input
+    placeholder="Seats available"
+    [(ngModel)]="section.seats"
+    [ngModelOptions]="{standalone: true}"
+    class="form-control">
+    </div>
+
+  </form>
+  <button (click)="createSection(section.name, section.seats)"  class="btn btn-block btn-primary color">Add Section</button>
+
+  <div class="row margintop">
+    <div *ngFor="let section of sections" class="col-sm-3">
+      <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{section.name}}</h5>
+        <p class="card-text">Seats are: {{section.seats}}</p>
+
+        <div class="row">
+          <div class="col-sm-12 mar">
+            <a routerLink="/" class="btn btn-primary color">Enroll</a>
+          </div>
+        </div>
+
+
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
