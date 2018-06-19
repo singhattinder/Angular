@@ -23,6 +23,8 @@ export class SectionListComponent implements OnInit {
     this.service.createSection( this.section.courseId, sectionName, seats)
       .then(() => this.loadSections(this.section.courseId));
   }
+  enroll(section) {
+  }
 
   ngOnInit() {
   }

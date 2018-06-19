@@ -1,14 +1,11 @@
 .color{
   background-color: slateblue;
   border-color: slateblue;
-}
-
-
-
-.mar{
-  margin-top: 5px;
+  color: white;
+  text-align: center;
 }
 
 .margintop{
   margin-top: 10px;
 }
+

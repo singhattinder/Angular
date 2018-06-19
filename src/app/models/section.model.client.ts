@@ -1,5 +1,5 @@
 export class SectionModelClient {
-  id: number;
+  _id: string;
   seats: number;
   name: string;
   courseId: number;
