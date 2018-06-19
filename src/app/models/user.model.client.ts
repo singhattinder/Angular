@@ -3,4 +3,8 @@ export class UserModelClient {
   lastName: string;
   email: string;
   username: string;
+  userType: string;
+  password: string;
+  password2: string;
+  _id: string;
 }

@@ -33,4 +33,14 @@ export class ProfileComponent implements OnInit {
   unEnrollStudentInSection(sectionId) {
     this.sectionService.unEnrollStudentInSection(sectionId);
   }
+  updateUser() {
+    alert(123);
+    const new_user = {
+      username: this.user.username,
+      firstName: this.user.firstName,
+      lastName: this.user.lastName,
+      email: this.user.email
+    };
+     this.service.updateUser(new_user).then();
+  }
 }
