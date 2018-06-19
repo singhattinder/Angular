@@ -9,3 +9,8 @@
   margin-right: 10px;
   margin-top: 10px;
 }
+
+.out {
+  border-color: slateblue;
+  color: slateblue;
+}

@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand">Profile</a>
+    <a class="navbar-brand">Profile and Sections</a>
   </nav>
 
 
@@ -41,17 +41,35 @@
           class="btn btn-primary btn-block color">
     Update
   </button>
-
-  <h2>Sections ({{sections.length}})</h2>
-
-  <ul class="list-group">
-    <li *ngFor="let enrollment of sections" class="list-group-item">
-      {{enrollment.section.name}}
-      ({{enrollment.section.seats}})
-    </li>
-  </ul>
-
   <span (click)="logout()" class="btn btn-secondary btn-sm mar">Logout</span>
   <span routerLink="/home" class="btn btn-secondary btn-sm mar">Home</span>
 
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Sections enrolled: {{sections.length}}</a>
+  </nav>
+
+  <div class="row">
+    <div *ngFor="let enrollment of sections" class="col-sm-3">
+  <div class="card border-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{enrollment.section.name}}</div>
+    <div class="card-body text-primary out">
+      <h5 class="card-title out">Section Title</h5>
+      <p class="card-text out">No of seats left in this section: {{enrollment.section.seats}}</p>
+      <button (click)="unEnrollStudentInSection(enrollment.section._id)"  class="btn btn-primary color">
+        UnEnroll
+      </button>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+</div>
+
+<div class="modal-footer">
+  <a class="gitcolor">GitHub:</a>
+  <a class="gitcolor" href="https://github.com/singhattinder">@singhattinder</a>
 </div>
