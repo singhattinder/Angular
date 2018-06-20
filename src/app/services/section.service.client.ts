@@ -9,7 +9,7 @@ export class SectionServiceClient {
       .then(response => response.json());
   }
   findSectionsForStudents() {
-    const url = 'http://localhost:4000/api/student/section';
+    const url = 'https://nodejs-mongo-assignment5.herokuapp.com/api/student/section';
     return fetch(url, {
       credentials: 'include'
     })
