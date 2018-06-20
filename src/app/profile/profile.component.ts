@@ -25,13 +25,19 @@ export class ProfileComponent implements OnInit {
       .findSectionsForStudents()
       .then( sections => this.sections = sections);
   }
+  loadSections() {
+    this.sectionService
+      .findSectionsForStudents()
+      .then( sections => this.sections = sections);
+  }
   logout() {
     this.service
       .logout()
       .then(() => this.router.navigate(['login']));
   }
   unEnrollStudentInSection(sectionId) {
-    this.sectionService.unEnrollStudentInSection(sectionId);
+    this.sectionService.unEnrollStudentInSection(sectionId)
+      .then(() => this.loadSections());
   }
   updateUser() {
     alert(123);
