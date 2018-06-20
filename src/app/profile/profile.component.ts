@@ -40,13 +40,12 @@ export class ProfileComponent implements OnInit {
       .then(() => this.loadSections());
   }
   updateUser() {
-    alert(123);
     const new_user = {
       username: this.user.username,
       firstName: this.user.firstName,
       lastName: this.user.lastName,
       email: this.user.email
     };
-     this.service.updateUser(new_user).then();
+     this.service.updateUser(new_user).then(() => alert('Updated'));
   }
 }
