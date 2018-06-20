@@ -25,18 +25,10 @@ export class AdminSectionComponent implements OnInit {
     this.service.createSection( this.section.courseId, sectionName, seats)
       .then(() => this.loadSections(this.section.courseId));
   }
-  enrollCheck = (section) => {
-    if (section.seats <= 0) {
-      return true;
-    } else {
-      return false;
-    }
+  deleteSection(section) {
+    this.service.deleteSection(section._id)
+      .then(() => this.loadSections(this.section.courseId));
   }
-  enroll(section) {
-    this.service.enrollStudentInSection(section._id)
-      .then(() => this.router.navigate(['profile']));
-  }
-
   ngOnInit() {
   }
 }

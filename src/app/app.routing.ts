@@ -7,6 +7,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {SectionListComponent} from './section-list/section-list.component';
 import {AdminComponent} from './admin/admin.component';
 import {AdminSectionComponent} from './admin-section/admin-section.component';
+import {AdminSectionEditorComponent} from './admin-section-editor/admin-section-editor.component';
 
 
 const appRoutes: Routes = [
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'profile', component: ProfileComponent},
   { path: 'admin', component: AdminComponent},
   { path: 'admin/:courseId/section', component: AdminSectionComponent},
+  { path: 'admin/:courseId/section/:sectionId', component: AdminSectionEditorComponent},
   { path: 'course/:courseId', component: CourseViewerComponent },
   { path: 'course/:courseId/section', component: SectionListComponent },
   { path: 'course/:courseId/module/:moduleId', component: CourseViewerComponent },

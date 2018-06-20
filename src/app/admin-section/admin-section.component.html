@@ -27,16 +27,21 @@
   </form>
   <button (click)="createSection(section.name, section.seats)"  class="btn btn-block btn-primary color">Add Section</button>
 
+  <span routerLink="/admin" class="btn btn-secondary btn-sm margintop mar">Admin Page</span>
+  <span routerLink="/home" class="btn btn-secondary btn-sm margintop mar">Home</span>
+  <span routerLink="/profile" class="btn btn-secondary btn-sm margintop mar">Profile</span>
+
   <div class="row margintop">
     <div *ngFor="let section of sections" class="col-sm-3">
       <div class="card margintop">
         <div class="card-body">
-          <h5 class="card-title">{{section.name}}</h5>
+          <h5  class="card-title">{{section.name}}</h5>
           <p class="card-text">Seats are: {{section.seats}}</p>
 
           <div class="row">
             <div class="col-sm-12 margintop">
-              <button (click)="enroll(section)" [disabled]="enrollCheck(section)"  class="float-right btn btn-primary color">Enroll</button>
+              <button (click)="deleteSection(section)"   class="float-right btn btn-primary color mar">Delete</button>
+              <button routerLink="/admin/{{section.courseId}}/section/{{section._id}}"   class="float-right btn btn-primary color mar">Edit</button>
             </div>
           </div>
 

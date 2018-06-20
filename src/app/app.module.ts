@@ -26,6 +26,7 @@ import {SectionServiceClient} from './services/section.service.client';
 import { AdminComponent } from './admin/admin.component';
 import { AdminSectionComponent } from './admin-section/admin-section.component';
 import { AdminCourseGridComponent } from './admin-course-grid/admin-course-grid.component';
+import { AdminSectionEditorComponent } from './admin-section-editor/admin-section-editor.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AdminCourseGridComponent } from './admin-course-grid/admin-course-grid.
     SectionListComponent,
     AdminComponent,
     AdminSectionComponent,
-    AdminCourseGridComponent
+    AdminCourseGridComponent,
+    AdminSectionEditorComponent
   ],
   imports: [
     BrowserModule,
