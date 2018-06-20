@@ -15,11 +15,14 @@ export class LoginComponent implements OnInit {
   login(username, password) {
     this.service
       .login(username, password)
-      .then(() => {
-        this.router.navigate(['profile']);
+      .then( (user) => {
+        if (user.userType === 'admin') {
+          this.router.navigate(['admin']);
+        } else {
+            this.router.navigate(['profile']);
+        }
       });
   }
   ngOnInit() {
   }
-
 }

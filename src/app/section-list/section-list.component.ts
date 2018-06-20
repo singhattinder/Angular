@@ -21,9 +21,12 @@ export class SectionListComponent implements OnInit {
     this.service.findSectionsForCourse(courseId)
       .then( sections => this.sections = sections );
   }
-  createSection(sectionName, seats) {
-    this.service.createSection( this.section.courseId, sectionName, seats)
-      .then(() => this.loadSections(this.section.courseId));
+  enrollCheck = (section) => {
+    if (section.seats <= 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
   enroll(section) {
     this.service.enrollStudentInSection(section._id)

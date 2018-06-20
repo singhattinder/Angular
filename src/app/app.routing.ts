@@ -5,6 +5,8 @@ import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {ProfileComponent} from './profile/profile.component';
 import {SectionListComponent} from './section-list/section-list.component';
+import {AdminComponent} from './admin/admin.component';
+import {AdminSectionComponent} from './admin-section/admin-section.component';
 
 
 const appRoutes: Routes = [
@@ -13,6 +15,8 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'profile', component: ProfileComponent},
+  { path: 'admin', component: AdminComponent},
+  { path: 'admin/:courseId/section', component: AdminSectionComponent},
   { path: 'course/:courseId', component: CourseViewerComponent },
   { path: 'course/:courseId/section', component: SectionListComponent },
   { path: 'course/:courseId/module/:moduleId', component: CourseViewerComponent },
