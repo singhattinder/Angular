@@ -1,0 +1,11 @@
+.color{
+  background-color: slateblue;
+  border-color: slateblue;
+  color: white;
+  text-align: center;
+}
+
+.margintop{
+  margin-top: 10px;
+}
+
