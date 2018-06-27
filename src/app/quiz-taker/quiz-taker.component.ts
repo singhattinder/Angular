@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Route, Router} from '@angular/router';
 import {QuizServiceClient} from '../services/quiz.service.client';
+import {SectionModelClient} from '../models/section.model.client';
+import {QuizModelClient} from '../models/quiz.model.client';
 
 @Component({
   selector: 'app-quiz-taker',
@@ -13,7 +15,7 @@ export class QuizTakerComponent implements OnInit {
     this.route.params.subscribe(params => this.loadQuiz(params.quizId));
   }
   quizId = '';
-  quiz = {};
+  quiz: QuizModelClient;
   submission = {};
   loadQuiz(quizId) {
     this.quizId = quizId;
