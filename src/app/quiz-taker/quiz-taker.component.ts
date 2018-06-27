@@ -11,7 +11,7 @@ import {QuizModelClient} from '../models/quiz.model.client';
 })
 export class QuizTakerComponent implements OnInit {
 
-  constructor(private router: Router,private service: QuizServiceClient, private route: ActivatedRoute) {
+  constructor(private router: Router, private service: QuizServiceClient, private route: ActivatedRoute) {
     this.route.params.subscribe(params => this.loadQuiz(params.quizId));
   }
   quizId = '';
@@ -25,7 +25,7 @@ export class QuizTakerComponent implements OnInit {
 
   submit(submission) {
     this.service.submitQuiz(this.submission, this.quizId).then((res) => console.log(res));
-    this.router.navigate(['quiz-submissions']);
+    this.router.navigate(['quiz-list']);
   }
   ngOnInit() {
   }
