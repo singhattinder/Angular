@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Quiz No: {{quizId}}</a>
+  </nav>
+
+  <div class="margintop">
+    <ul class="list-group">
+      <li *ngFor="let question of quiz.questions" class="list-group-item">
+        <div [ngSwitch]="question.type">
+          <div *ngSwitchCase="'essay'">
+            <h1>Essay Question</h1>
+            <textarea [(ngModel)]="submission[question._id]"
+                      [ngModelOptions]="{standalone: true}"
+                      class="form-control">
+
+            </textarea>
+          </div>
+
+        </div>
+
+
+      </li>
+
+    </ul>
+    <button (click)="submit(submission)">Submit</button>
+  </div>
+</div>

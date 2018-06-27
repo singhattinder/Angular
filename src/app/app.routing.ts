@@ -8,6 +8,10 @@ import {SectionListComponent} from './section-list/section-list.component';
 import {AdminComponent} from './admin/admin.component';
 import {AdminSectionComponent} from './admin-section/admin-section.component';
 import {AdminSectionEditorComponent} from './admin-section-editor/admin-section-editor.component';
+import {QuizListComponent} from './quiz-list/quiz-list.component';
+import {QuizTakerComponent} from './quiz-taker/quiz-taker.component';
+import {QuizSubmissionsComponent} from './quiz-submissions/quiz-submissions.component';
+
 
 
 const appRoutes: Routes = [
@@ -16,6 +20,9 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'profile', component: ProfileComponent},
+  { path: 'quiz/:quizId', component: QuizTakerComponent},
+  { path: 'quiz/:quizId/submissions', component: QuizSubmissionsComponent},
+  { path: 'quizzes', component: QuizListComponent},
   { path: 'admin', component: AdminComponent},
   { path: 'admin/:courseId/section', component: AdminSectionComponent},
   { path: 'admin/:courseId/section/:sectionId', component: AdminSectionEditorComponent},

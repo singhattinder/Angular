@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Submission: {{submissions.length}}</a>
+  </nav>
+
+  <div class="margintop">
+    <ul class="list-group">
+      <li *ngFor="let submission of submissions" class="list-group-item">
+        {{submission.username}}
+        {{submission.answers}}
+      </li>
+
+    </ul>
+  </div>
+</div>

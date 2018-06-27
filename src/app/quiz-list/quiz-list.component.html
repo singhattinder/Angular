@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Quizzes: {{quizzes.length}}</a>
+  </nav>
+
+  <div class="margintop">
+  <ul class="list-group">
+    <li *ngFor="let quiz of quizzes" class="list-group-item">
+      {{quiz.name}}
+      <a routerLink="/quiz/{{quiz._id}}" class="btn btn-primary float-right margin-rit"> Take</a>
+      <a routerLink="/quiz/{{quiz._id}}/submissions" class="btn btn-info float-right margin-rit"> submission</a>
+    </li>
+
+  </ul>
+  </div>
+</div>

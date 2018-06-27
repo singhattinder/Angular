@@ -1,8 +1,10 @@
 
 export class UserServiceClient {
+  LOCAL_URL = 'http://localhost:3000';
+  HEROKU_URL = 'https://nodejs-mongo-assignment5.herokuapp.com';
 
   findUserById(userId) {
-    return fetch('https://nodejs-mongo-assignment5.herokuapp.com/api/user/' + userId)
+    return fetch(this.HEROKU_URL + '/api/user/' + userId)
       .then(response => response.json());
   }
 
@@ -11,7 +13,7 @@ export class UserServiceClient {
       username: username,
       password: password
     };
-    return fetch('https://nodejs-mongo-assignment5.herokuapp.com/api/login', {
+    return fetch(this.HEROKU_URL + '/api/login', {
       method: 'post',
       body: JSON.stringify(credentials),
       credentials: 'include',
@@ -22,21 +24,21 @@ export class UserServiceClient {
   }
 
   logout() {
-    return fetch('https://nodejs-mongo-assignment5.herokuapp.com/api/logout', {
+    return fetch( this.HEROKU_URL + '/api/logout', {
       method: 'post',
       credentials: 'include'
     });
   }
 
   profile() {
-    return fetch('https://nodejs-mongo-assignment5.herokuapp.com/api/profile',
+    return fetch( this.HEROKU_URL + '/api/profile',
       {
         credentials: 'include', // include, same-origin, *omit
       })
       .then(response => response.json());
   }
   updateUser(user) {
-    return fetch('https://nodejs-mongo-assignment5.herokuapp.com/api/profile',
+    return fetch( this.HEROKU_URL + '/api/profile',
       {
         method: 'put',
         body: JSON.stringify(user),
@@ -56,7 +58,7 @@ export class UserServiceClient {
       email: email,
       userType: userType
     };
-    return fetch('https://nodejs-mongo-assignment5.herokuapp.com/api/user', {
+    return fetch(this.HEROKU_URL + '/api/user', {
       body: JSON.stringify(user),
       credentials: 'include', // include, same-origin, *omit
       method: 'post',

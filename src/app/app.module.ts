@@ -27,6 +27,10 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminSectionComponent } from './admin-section/admin-section.component';
 import { AdminCourseGridComponent } from './admin-course-grid/admin-course-grid.component';
 import { AdminSectionEditorComponent } from './admin-section-editor/admin-section-editor.component';
+import { QuizListComponent } from './quiz-list/quiz-list.component';
+import {QuizServiceClient} from './services/quiz.service.client';
+import { QuizTakerComponent } from './quiz-taker/quiz-taker.component';
+import { QuizSubmissionsComponent } from './quiz-submissions/quiz-submissions.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,10 @@ import { AdminSectionEditorComponent } from './admin-section-editor/admin-sectio
     AdminComponent,
     AdminSectionComponent,
     AdminCourseGridComponent,
-    AdminSectionEditorComponent
+    AdminSectionEditorComponent,
+    QuizListComponent,
+    QuizTakerComponent,
+    QuizSubmissionsComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +68,8 @@ import { AdminSectionEditorComponent } from './admin-section-editor/admin-sectio
     LessonsServiceClient,
     WidgetServiceClient,
     UserServiceClient,
-    SectionServiceClient
+    SectionServiceClient,
+    QuizServiceClient
   ],
   bootstrap: [AppComponent]
 })

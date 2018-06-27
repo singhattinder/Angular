@@ -1,7 +1,9 @@
 import {SectionModelClient} from '../models/section.model.client';
 
 export class SectionServiceClient {
+  LOCAL_URL = 'http://localhost:3000';
   HEROKU_URL = 'https://nodejs-mongo-assignment5.herokuapp.com';
+  LOCAL_SECTION = 'http://localhost:3000/api/course/COURSEID/section';
   SECTION_URL = 'https://nodejs-mongo-assignment5.herokuapp.com/api/course/COURSEID/section';
 
   findSectionsForCourse(courseId) {
@@ -9,7 +11,7 @@ export class SectionServiceClient {
       .then(response => response.json());
   }
   findSectionsForStudents() {
-    const url = 'https://nodejs-mongo-assignment5.herokuapp.com/api/student/section';
+    const url = this.HEROKU_URL + '/api/student/section';
     return fetch(url, {
       credentials: 'include'
     })
